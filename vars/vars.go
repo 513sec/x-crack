@@ -29,9 +29,9 @@ import (
 
 	"gopkg.in/cheggaaa/pb.v2"
 
+	"strings"
 	"sync"
 	"time"
-	"strings"
 )
 
 var (

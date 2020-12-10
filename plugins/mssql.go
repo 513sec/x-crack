@@ -29,8 +29,8 @@ import (
 
 	"x-crack/models"
 
-	"fmt"
 	"database/sql"
+	"fmt"
 )
 
 func ScanMssql(service models.Service) (err error, result models.ScanResult) {

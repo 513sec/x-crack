@@ -27,8 +27,8 @@ package plugins_test
 import (
 	"testing"
 
-	"x-crack/plugins"
 	"x-crack/models"
+	"x-crack/plugins"
 )
 
 func TestScanMysql(t *testing.T) {

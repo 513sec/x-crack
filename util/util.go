@@ -27,13 +27,13 @@ package util
 import (
 	"gopkg.in/cheggaaa/pb.v2"
 
-	"x-crack/models"
 	"x-crack/logger"
+	"x-crack/models"
 	"x-crack/vars"
 
-	"sync"
-	"net"
 	"fmt"
+	"net"
+	"sync"
 )
 
 var (
@@ -45,7 +45,7 @@ func init() {
 	AliveAddr = make([]models.IpAddr, 0)
 }
 
-func CheckAlive(ipList []models.IpAddr) ([]models.IpAddr) {
+func CheckAlive(ipList []models.IpAddr) []models.IpAddr {
 	logger.Log.Infoln("checking ip active")
 	vars.ProcessBarActive = pb.StartNew(len(ipList))
 	vars.ProcessBarActive.SetTemplate(`{{ rndcolor "Checking progress: " }} {{  percent . "[%.02f%%]" "[?]"| rndcolor}} {{ counters . "[%s/%s]" "[%s/?]" | rndcolor}} {{ bar . "「" "-" (rnd "ᗧ" "◔" "◕" "◷" ) "•" "」" | rndcolor}}  {{rtime . | rndcolor }}`)

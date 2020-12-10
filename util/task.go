@@ -57,7 +57,7 @@ func GenerateTask(ipList []models.IpAddr, users []string, passwords []string) (t
 	return tasks, len(tasks)
 }
 
-func DistributionTask(tasks []models.Service) () {
+func DistributionTask(tasks []models.Service) {
 	totalTask := len(tasks)
 	scanBatch := totalTask / vars.ScanNum
 	logger.Log.Infoln("Start to scan")
@@ -79,7 +79,7 @@ func DistributionTask(tasks []models.Service) () {
 	models.DumpToFile(vars.ResultFile)
 }
 
-func ExecuteTask(tasks []models.Service) () {
+func ExecuteTask(tasks []models.Service) {
 	var wg sync.WaitGroup
 	wg.Add(len(tasks))
 	for _, task := range tasks {

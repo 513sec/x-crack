@@ -25,8 +25,8 @@ THE SOFTWARE.
 package plugins_test
 
 import (
-	"x-crack/plugins"
 	"x-crack/models"
+	"x-crack/plugins"
 
 	"testing"
 )

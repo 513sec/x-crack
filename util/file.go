@@ -25,14 +25,14 @@ THE SOFTWARE.
 package util
 
 import (
-	"x-crack/models"
 	"x-crack/logger"
+	"x-crack/models"
 	"x-crack/vars"
 
-	"os"
 	"bufio"
-	"strings"
+	"os"
 	"strconv"
+	"strings"
 )
 
 func ReadIpList(fileName string) (ipList []models.IpAddr) {

@@ -28,15 +28,15 @@ import (
 	"github.com/patrickmn/go-cache"
 	"github.com/urfave/cli"
 
-	"x-crack/vars"
 	"x-crack/logger"
 	"x-crack/util/hash"
+	"x-crack/vars"
 
 	"encoding/gob"
-	"time"
 	"fmt"
 	"os"
 	"strings"
+	"time"
 )
 
 func init() {
@@ -67,7 +67,7 @@ func SaveResult(err error, result ScanResult) {
 	}
 }
 
-func SavaResultToFile() (error) {
+func SavaResultToFile() error {
 	return vars.CacheService.SaveFile("x_crack.db")
 }
 

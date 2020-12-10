@@ -30,7 +30,6 @@ import (
 	"x-crack/models"
 	"x-crack/vars"
 
-
 	"fmt"
 )
 

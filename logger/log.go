@@ -25,8 +25,10 @@ THE SOFTWARE.
 package logger
 
 import (
+	"github.com/go-sql-driver/mysql"
 	"github.com/sirupsen/logrus"
 	"github.com/x-cray/logrus-prefixed-formatter"
+	"io/ioutil"
 )
 
 var (
@@ -38,4 +40,9 @@ func init() {
 	logger.Formatter = new(prefixed.TextFormatter)
 	logger.Level = logrus.DebugLevel
 	Log = logger.WithFields(logrus.Fields{"prefix": "xsec crack"})
+
+	// mute mysql log
+	muteLogger := logrus.New()
+	muteLogger.SetOutput(ioutil.Discard)
+	mysql.SetLogger(muteLogger)
 }
